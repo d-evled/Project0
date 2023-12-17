@@ -3,11 +3,9 @@
 
 using namespace std;
 
-class Dog : public Animal {
-public:
-    Dog(){}
-    void bark()
-    {
-        cout << "woof woof" << endl;
-    }
-};
+Dog::Dog(){}
+
+void Dog::bark()
+{
+    cout << "woof woof" << endl;
+}

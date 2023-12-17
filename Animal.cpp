@@ -3,10 +3,9 @@
 
 using namespace std;
 
-class Animal {
-public:
-    Animal() {}
-    void eat() {
-        cout <<  "om nom nom" << endl;
-    }
-};
+Animal::Animal() {}
+
+void Animal::eat() 
+{
+    cout <<  "om nom nom" << endl;
+}
