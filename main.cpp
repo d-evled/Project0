@@ -20,7 +20,8 @@ void generateDotFile() {
 }
 
 int main() {
-    std::string path = fs::current_path(); // current_path() provides path to working directory
+    fs::path path = fs::current_path(); // current_path() provides path to working directory
+    std::string pathStr = path.u8string();
 
     // Prints out all files within working directory using filesystem library
     for (const auto & entry : fs::directory_iterator(path))
