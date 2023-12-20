@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <filesystem>
+namespace fs = std::filesystem;
 
 void generateDotFile() {
     std::ofstream dotFile("inheritance_graph.dot");
@@ -18,7 +20,16 @@ void generateDotFile() {
 }
 
 int main() {
+    std::string path = fs::current_path(); // current_path() provides path to working directory
+
+    // Prints out all files within working directory using filesystem library
+    for (const auto & entry : fs::directory_iterator(path))
+        std::cout << entry.path() << std::endl;
+
+
     generateDotFile();
-    // You can also launch an external viewer for the generated PNG file here.
+
+    // Runs the DOT command line to build the image
+    system("dot -Tpng inheritance_graph.dot -o inheritance_graph.png");
     return 0;
 }
