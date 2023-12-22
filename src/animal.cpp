@@ -1,11 +1,11 @@
-#include "Animal.h"
+#include "../lib/animal.h"
 #include <iostream>
 
 using namespace std;
 
-Animal::Animal() {}
+animal::animal() {}
 
-void Animal::eat() 
+void animal::eat() 
 {
     cout <<  "om nom nom" << endl;
 }

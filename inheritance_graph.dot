@@ -1,3 +1,0 @@
-digraph InheritanceGraph {
-  Animal -> Dog [label="inherits"];
-}

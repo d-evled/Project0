@@ -1,11 +1,11 @@
-#include "Dog.h"
+#include "../lib/dog.h"
 #include <iostream>
 
 using namespace std;
 
-Dog::Dog(){}
+dog::dog(){}
 
-void Dog::bark()
+void dog::bark()
 {
     cout << "woof woof" << endl;
 }
